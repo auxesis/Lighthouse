@@ -1,10 +1,10 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Lighthouse",
   "short_name": "Lighthouse",
   "description": "Provides multiple enhancements to NSW SES beacon.",
   "version": "2022.04.6.01",
-    "browser_action": {
+    "action": {
       "default_icon": {
         "16": "icons/lighthouse64.png"
         },
@@ -17,6 +17,10 @@
   },
   "permissions": [
     "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": [
     "https://identitypreview.ses.nsw.gov.au/core/login",
     "https://identitytrain.ses.nsw.gov.au/core/login",
     "https://identitytest.ses.nsw.gov.au/core/login",
@@ -33,9 +37,7 @@
     "https://api.transport.nsw.gov.au/*",
     "https://www.ausgrid.com.au/*",
     "https://www.endeavourenergy.com.au/*",
-    "https://www.essentialenergy.com.au/*",
-    "webRequest",
-    "webRequestBlocking"
+    "https://www.essentialenergy.com.au/*"
   ],
   "content_scripts": [
     {
@@ -156,13 +158,22 @@
     }
   ],
   "web_accessible_resources": [
-    "injectscripts/*",
-    "icons/*",
-    "pages/*",
-    "resources/*",
-    "manifest.json"
+    {
+      "resources": [ "injectscripts/*",
+        "icons/*",
+        "pages/*",
+        "resources/*",
+        "manifest.json"
+      ],
+      "matches": [ "https://beacon.ses.nsw.gov.au/*",
+        "https://trainbeacon.ses.nsw.gov.au/*",
+        "https://previewbeacon.ses.nsw.gov.au/*",
+        "https://testbeacon.ses.nsw.gov.au/*",
+        "https://testbeaconau.ses.nsw.gov.au/*",
+        "https://devbeacon.ses.nsw.gov.au/*"]
+    }
   ],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   }
 }
