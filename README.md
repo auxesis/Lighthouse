@@ -48,5 +48,5 @@ Pull requests are welcome!
 
 ## Known Limitations
 
-- All summary, statistics and export screens will only follow HQ and time/date filters, eg if you filter by job type then generate a summary it will be everything not just that job type.
+- All summary, statistics and export screens will only follow HQ and time/date filters. For example, if you filter by job type then generate a summary it will be everything not just that job type.
 - Lighthouse menu - If you are a region user it will only show your region, not all units within your region. You need to generate these screens from the Job Register to get around this.
