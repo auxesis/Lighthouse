@@ -9,7 +9,8 @@
 
 ## Purpose
 
-Lighthouse is intended to augment the functionality provided by Beacon. It streamlines some common workflows, such as closing a job or tasking a job to a team, it also provides customised displays for use on screens in an Operations Room.
+Lighthouse is intended to augment the functionality provided by Beacon. It streamlines some common workflows, such as closing a job, or tasking a job to a team. 
+It also provides customised displays for use on screens in an Operations Room.
 
 Lighthouse also provides an opportunity to test functionality or fixes before those changes are put to the Beacon development team for incorporation into the core system.
 
